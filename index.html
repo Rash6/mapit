@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My google map</title>
+</head>
+<body>
+    <h1>My Google Map</h1>
+    <div id="map"></div>
+  
+  
+   
+</body>
+
+</html>
+<script>
+// let mapContainer=document.getElementById("map");
+// function displayMap(params={
+//    q:"Bangalore",
+// }){
+//    mapContainer.innerHTML=`<iframe
+//    style="border:0;width:100vw; height:100vh"
+//    loading="lazy"
+//    allowfullscreen
+//    referrerpolicy="no-referrer-when-downgrade"
+//    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCV-im_l-AEXmGhpSytEhqMOf2Gy6dB80g
+//    ${checkParams(params)}
+//      ">
+//  </iframe>`;
+// }
+// function checkParams(params){
+//  let str=``;
+//  for(let key in params){
+//     str=str+"&"+key+"="+params[key];
+//  }
+//  return str;
+// }
+// displayMap();
+let mapContainer=document.getElementById("map")
+
+function mapDisplay(place="Bangalore"){
+    const map=`<iframe
+    width="450"
+    height="258"
+    frameborder="0" style="border:0"
+    referrerpolicy="no-referrer-when-downgrade"
+//    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCV-im_l-AEXmGhpSytEhqMOf2Gy6dB80g&q=${place}"
+allowfullscreen>    
+</iframe>`;
+mapContainer.innerHTML=map;
+}
+mapDisplay("KLE College");
+</script>
